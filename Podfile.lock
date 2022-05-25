@@ -1,27 +1,10 @@
 PODS:
-  - Firebase/Analytics (3.6.0):
-    - FirebaseAnalytics (= 3.4.2)
-  - Firebase/Auth (9.0.0):
-    - Firebase/CoreOnly
-    - FirebaseAuth (~> 9.0.0)
-  - Firebase/Core (3.6.0):
-    - Firebase/Analytics
-  - Firebase/CoreOnly (9.0.0):
-    - FirebaseCore (= 9.0.0)
-  - Firebase/Database (9.0.0):
-    - Firebase/CoreOnly
-    - FirebaseDatabase (~> 9.0.0)
-  - FirebaseAnalytics (3.4.2):
-    - FirebaseInstanceID (~> 1.0)
-    - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleSymbolUtilities (~> 1.1)
-    - GoogleUtilities (~> 1.2)
   - FirebaseAuth (9.0.0):
     - FirebaseCore (~> 9.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/Environment (~> 7.7)
     - GTMSessionFetcher/Core (~> 1.7)
-  - FirebaseCore (9.0.0):
+  - FirebaseCore (9.1.0):
     - FirebaseCoreDiagnostics (~> 9.0)
     - FirebaseCoreInternal (~> 9.0)
     - GoogleUtilities/Environment (~> 7.7)
@@ -36,16 +19,10 @@ PODS:
   - FirebaseDatabase (9.0.0):
     - FirebaseCore (~> 9.0)
     - leveldb-library (~> 1.22)
-  - FirebaseInstanceID (1.0.9)
   - GoogleDataTransport (9.1.4):
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
-  - GoogleInterchangeUtilities (1.2.2):
-    - GoogleSymbolUtilities (~> 1.1)
-  - GoogleSymbolUtilities (1.1.2)
-  - GoogleUtilities (1.3.2):
-    - GoogleSymbolUtilities (~> 1.1)
   - GoogleUtilities/AppDelegateSwizzler (7.7.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -71,23 +48,18 @@ PODS:
   - PromisesObjC (2.1.0)
 
 DEPENDENCIES:
-  - Firebase/Auth
-  - Firebase/Core
-  - Firebase/Database
+  - FirebaseAuth
+  - FirebaseCore
+  - FirebaseDatabase
 
 SPEC REPOS:
   trunk:
-    - Firebase
-    - FirebaseAnalytics
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCoreInternal
     - FirebaseDatabase
-    - FirebaseInstanceID
     - GoogleDataTransport
-    - GoogleInterchangeUtilities
-    - GoogleSymbolUtilities
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
@@ -95,23 +67,18 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
-  Firebase: a876fadc5ea653a377693376fd4f885c62704512
-  FirebaseAnalytics: 3f5358d9104adf159cc8d99b7b501e50099a39ad
   FirebaseAuth: eae56c13e1161da89be202b1fae3ca60b4b8d689
-  FirebaseCore: e4c0b5d9727eaee0b43f9ed00baff7500c188d7b
+  FirebaseCore: b7bfc258e996eada23b3666bd6b9a22ca092acb8
   FirebaseCoreDiagnostics: 2dabba3412b23b524823325739f45e520f67d1e7
   FirebaseCoreInternal: f3c838ae0b41cd840bbf34f90debfede78d352e5
   FirebaseDatabase: c7bb29fefd9196f719164452ebe287bc8f5976dd
-  FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
-  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
-  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
 
-PODFILE CHECKSUM: 810a5e5a16a26b91f44479a80bb73e63d2796db8
+PODFILE CHECKSUM: 8883c830440597bff6f10af9c4f23fc902b695db
 
 COCOAPODS: 1.11.2
