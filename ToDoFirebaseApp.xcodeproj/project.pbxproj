@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		09EFB9CAC59A975D86D6DAED /* Pods_ToDoFirebaseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C76D28D01B998F4F2E4EB0 /* Pods_ToDoFirebaseApp.framework */; };
+		2B1DF5BB283EBA9E00CE7512 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1DF5BA283EBA9E00CE7512 /* Task.swift */; };
+		2B1DF5BD283EBAAC00CE7512 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1DF5BC283EBAAC00CE7512 /* User.swift */; };
 		2B72E16F283D6FC1005AA720 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B72E16E283D6FC1005AA720 /* GoogleService-Info.plist */; };
 		2B969123283D527B00015726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B969122283D527B00015726 /* AppDelegate.swift */; };
 		2B969125283D527B00015726 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B969124283D527B00015726 /* SceneDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B1DF5BA283EBA9E00CE7512 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2B1DF5BC283EBAAC00CE7512 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2B72E16E283D6FC1005AA720 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B96911F283D527B00015726 /* ToDoFirebaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFirebaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B969122283D527B00015726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1DF5B9283EBA9000CE7512 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B1DF5BA283EBA9E00CE7512 /* Task.swift */,
+				2B1DF5BC283EBAAC00CE7512 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2B969116283D527B00015726 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +80,7 @@
 		2B969121283D527B00015726 /* ToDoFirebaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				2B1DF5B9283EBA9000CE7512 /* Models */,
 				2B969122283D527B00015726 /* AppDelegate.swift */,
 				2B969124283D527B00015726 /* SceneDelegate.swift */,
 				2B969138283D632A00015726 /* ViewControllers */,
@@ -94,7 +108,6 @@
 				9D91455066F971E8D5BDC66A /* Pods-ToDoFirebaseApp.debug.xcconfig */,
 				C3EEC158ED1832475A3BA72C /* Pods-ToDoFirebaseApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -224,6 +237,8 @@
 			files = (
 				2B969127283D527B00015726 /* LoginViewController.swift in Sources */,
 				2B969137283D62EF00015726 /* TasksViewController.swift in Sources */,
+				2B1DF5BD283EBAAC00CE7512 /* User.swift in Sources */,
+				2B1DF5BB283EBA9E00CE7512 /* Task.swift in Sources */,
 				2B969123283D527B00015726 /* AppDelegate.swift in Sources */,
 				2B969125283D527B00015726 /* SceneDelegate.swift in Sources */,
 			);
