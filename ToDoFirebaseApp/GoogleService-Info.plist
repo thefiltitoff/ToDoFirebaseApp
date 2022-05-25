@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>540791875140-3mnu19dl3nrp28ek07jlnr225duv9kk1.apps.googleusercontent.com</string>
+	<string>375346798902-j9gbmrd99p7mbgidtpp8c4rjmghellp1.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.540791875140-3mnu19dl3nrp28ek07jlnr225duv9kk1</string>
+	<string>com.googleusercontent.apps.375346798902-j9gbmrd99p7mbgidtpp8c4rjmghellp1</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAy5t_xNb8k8lxGSDD7vR4YQUO0B1cv13k</string>
+	<string>AIzaSyAmsExd31smnbvmCQQ2Nbm_9q9BrTga7hs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>540791875140</string>
+	<string>375346798902</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.thefiltitoff.ToDoFirebaseApp</string>
 	<key>PROJECT_ID</key>
-	<string>todotasks-ee165</string>
+	<string>todotasks-f5fed</string>
 	<key>STORAGE_BUCKET</key>
-	<string>todotasks-ee165.appspot.com</string>
+	<string>todotasks-f5fed.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:540791875140:ios:94942b19f990e570a4be11</string>
+	<string>1:375346798902:ios:1ab8b77ead0cddfc599397</string>
 </dict>
 </plist>

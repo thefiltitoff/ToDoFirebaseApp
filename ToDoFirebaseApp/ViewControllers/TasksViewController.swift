@@ -9,12 +9,24 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class TasksViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-
+    var user: User!
+    var ref: DatabaseReference!
+    var tasks: [Task] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        guard let currentUser = Auth.auth().currentUser else { return }
+        user = User(user: currentUser)
+        ref = Database.database().reference(withPath: "users").child(user.uid).child("tasks")
+    }
+    
     @IBAction func signOutTapped(_ sender: UIBarButtonItem) {
         do {
             try Auth.auth().signOut()
@@ -32,12 +44,14 @@ class TasksViewController: UIViewController {
             preferredStyle: .alert
         )
         alertController.addTextField()
-        let save = UIAlertAction(title: "Save", style: .default) {_ in
+        let save = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
             guard let textField = alertController.textFields?.first, textField.text != "" else {
                 return
             }
             
-            // taskRef
+            let task = Task(title: textField.text!, userId: (self?.user.uid)!)
+            let taskRef = self?.ref.child(task.title.lowercased())
+            taskRef?.setValue(task.convertToDictionary())
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
