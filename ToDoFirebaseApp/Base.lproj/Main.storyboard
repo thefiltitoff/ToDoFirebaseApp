@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +11,11 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoFirebaseApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qtb-Uh-7hA"/>
+                        <viewControllerLayoutGuide type="bottom" id="nE7-Yd-sEq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -68,7 +71,6 @@
                                                 <state key="normal" title="Login"/>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmI-zh-gGf"/>
-                                                    <segue destination="G91-AC-JRG" kind="presentation" identifier="tasksSegue" modalPresentationStyle="fullScreen" id="UIW-cC-fDO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqf-5Z-fWf">
@@ -97,19 +99,19 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="Hhg-39-cDH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="I44-aH-my3"/>
+                            <constraint firstItem="Hhg-39-cDH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="I44-aH-my3"/>
                             <constraint firstItem="Hhg-39-cDH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QvE-Gx-38j"/>
                             <constraint firstItem="Hhg-39-cDH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dcL-1z-Zm6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hhg-39-cDH" secondAttribute="trailing" constant="40" id="x3F-0w-2ij"/>
+                            <constraint firstAttribute="trailing" secondItem="Hhg-39-cDH" secondAttribute="trailing" constant="40" id="x3F-0w-2ij"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="LVq-LB-SPR" id="01A-fn-99c"/>
                         <outlet property="errorLabel" destination="vjP-ep-rSp" id="bVK-6i-qYI"/>
                         <outlet property="passwordTextField" destination="fPl-0a-qPN" id="cTG-Rr-Wh1"/>
+                        <segue destination="G91-AC-JRG" kind="presentation" identifier="tasksSegue" modalPresentationStyle="fullScreen" id="ed0-n0-qal"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,6 +122,10 @@
         <scene sceneID="I1E-Y1-o8S">
             <objects>
                 <viewController id="abh-kX-aR6" customClass="TasksViewController" customModule="ToDoFirebaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Twt-zW-nDj"/>
+                        <viewControllerLayoutGuide type="bottom" id="kxI-fp-grp"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hlF-fo-OcP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,16 +151,20 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="ck8-0I-qLY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kbW-4K-KD4" firstAttribute="leading" secondItem="ck8-0I-qLY" secondAttribute="leading" id="Kxl-p0-OAi"/>
+                            <constraint firstItem="kbW-4K-KD4" firstAttribute="leading" secondItem="hlF-fo-OcP" secondAttribute="leading" id="Kxl-p0-OAi"/>
                             <constraint firstItem="kbW-4K-KD4" firstAttribute="top" secondItem="hlF-fo-OcP" secondAttribute="top" id="N32-U7-9Dd"/>
-                            <constraint firstItem="kbW-4K-KD4" firstAttribute="trailing" secondItem="ck8-0I-qLY" secondAttribute="trailing" id="Sha-Ya-Gpj"/>
-                            <constraint firstItem="kbW-4K-KD4" firstAttribute="bottom" secondItem="ck8-0I-qLY" secondAttribute="bottom" constant="34" id="Y8t-9W-Yl0"/>
+                            <constraint firstItem="kbW-4K-KD4" firstAttribute="trailing" secondItem="hlF-fo-OcP" secondAttribute="trailing" id="Sha-Ya-Gpj"/>
+                            <constraint firstItem="kbW-4K-KD4" firstAttribute="bottom" secondItem="kxI-fp-grp" secondAttribute="top" constant="34" id="Y8t-9W-Yl0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="T8z-iY-5bc">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="a8d-PU-fut">
+                            <connections>
+                                <action selector="signOutTapped:" destination="abh-kX-aR6" id="h9y-7F-G1O"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qQ4-yg-4K7">
                             <connections>
                                 <action selector="addTaskTapped:" destination="abh-kX-aR6" id="TYd-yG-Q6V"/>
