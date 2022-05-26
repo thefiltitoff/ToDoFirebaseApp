@@ -59,6 +59,34 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2B1DF5C0283F6CC100CE7512 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B96912B283D527F00015726 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B1DF5C1283F6CD000CE7512 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2B969128283D527B00015726 /* Main.storyboard */,
+				2B96912D283D527F00015726 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2B1DF5C2283F6D2700CE7512 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2B969122283D527B00015726 /* AppDelegate.swift */,
+				2B969124283D527B00015726 /* SceneDelegate.swift */,
+				2B1DF5BE283EC97F00CE7512 /* GoogleService-Info.plist */,
+				2B969130283D527F00015726 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		2B969116283D527B00015726 = {
 			isa = PBXGroup;
 			children = (
@@ -80,15 +108,11 @@
 		2B969121283D527B00015726 /* ToDoFirebaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				2B1DF5C2283F6D2700CE7512 /* App */,
 				2B1DF5B9283EBA9000CE7512 /* Models */,
-				2B969122283D527B00015726 /* AppDelegate.swift */,
-				2B969124283D527B00015726 /* SceneDelegate.swift */,
 				2B969138283D632A00015726 /* ViewControllers */,
-				2B969128283D527B00015726 /* Main.storyboard */,
-				2B96912B283D527F00015726 /* Assets.xcassets */,
-				2B96912D283D527F00015726 /* LaunchScreen.storyboard */,
-				2B1DF5BE283EC97F00CE7512 /* GoogleService-Info.plist */,
-				2B969130283D527F00015726 /* Info.plist */,
+				2B1DF5C1283F6CD000CE7512 /* Storyboards */,
+				2B1DF5C0283F6CC100CE7512 /* Resources */,
 			);
 			path = ToDoFirebaseApp;
 			sourceTree = "<group>";
@@ -390,7 +414,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RB3BCBLCA6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoFirebaseApp/Info.plist;
+				INFOPLIST_FILE = ToDoFirebaseApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -419,7 +443,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RB3BCBLCA6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoFirebaseApp/Info.plist;
+				INFOPLIST_FILE = ToDoFirebaseApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

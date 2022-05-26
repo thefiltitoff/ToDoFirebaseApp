@@ -23,6 +23,7 @@ class TasksViewController: UIViewController {
         super.viewDidLoad()
         
         guard let currentUser = Auth.auth().currentUser else { return }
+        
         user = User(user: currentUser)
         ref = Database.database().reference(withPath: "users").child(user.uid).child("tasks")
     }
@@ -44,30 +45,11 @@ class TasksViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         ref.removeAllObservers()
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let task = tasks[indexPath.row]
-            task.ref?.removeValue()
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) else { return }
-        let task = tasks[indexPath.row]
-        let isCompleted = !task.completed
-        
-        toggleCompletion(cell, isCompleted: isCompleted)
-        task.ref?.updateChildValues(["completed": isCompleted])
-    }
-    
-    func toggleCompletion(_ cell: UITableViewCell, isCompleted: Bool) {
+    private func toggleCompletion(_ cell: UITableViewCell, isCompleted: Bool) {
         cell.accessoryType = isCompleted ? .checkmark : .none
     }
     
@@ -110,7 +92,25 @@ class TasksViewController: UIViewController {
 }
 
 extension TasksViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let task = tasks[indexPath.row]
+            task.ref?.removeValue()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        let task = tasks[indexPath.row]
+        let isCompleted = !task.completed
+        
+        toggleCompletion(cell, isCompleted: isCompleted)
+        task.ref?.updateChildValues(["completed": isCompleted])
+    }
 }
 
 extension TasksViewController: UITableViewDataSource {
