@@ -50,4 +50,4 @@
 
 ## Copyright
 
-Copyright © 2021 by [Felix Titov](https://github.com/filtitov2001)
+Copyright © 2022 by [Felix Titov](https://github.com/filtitov2001)
