@@ -33,6 +33,7 @@
 * Swift
 * UIKit
 * Firebase
+* CocoaPods
 
 ## Installation
 
@@ -43,6 +44,18 @@
 ```
 2. Create project on Firebase
 3. Change Google-service.plist file on yours
+4. Go to app folder
+```bash
+  cd ToDoFirebaseApp
+```
+5. Install dependency 
+```bash
+  pod install
+```
+6. Open project
+```bash
+  open ToDoFirebaseApp.xcworkspace
+```
 
 ## License
 
