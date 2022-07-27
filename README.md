@@ -1,6 +1,7 @@
 # To Do List App 🧾☑️
 
-###### This application allows you create account and your tasks list with deleting and marking completion.
+This application allows you create account and your tasks list with deleting and marking completion. <br />
+Application supports saving tasks and user's data in Firebase.
 
 <div align="center">
   
